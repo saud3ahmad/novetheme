@@ -1,0 +1,30 @@
+<header class="nc-header">
+  <div class="container">
+    <a href="{{ routes.root_url }}" class="nc-logo">
+      {% if settings.logo != blank %}
+        {{ settings.logo | image_url: width: 240 | image_tag: alt: shop.name }}
+      {% else %}
+        {{ shop.name }}
+      {% endif %}
+    </a>
+
+    <nav>
+      {% for link in section.settings.menu.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+{
+ "name":"Header",
+ "settings":[
+  {
+   "type":"link_list",
+   "id":"menu",
+   "label":"Menu"
+  }
+ ]
+}
+{% endschema %}

@@ -1,0 +1,25 @@
+<section class="collection-list section">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
+    <div class="collection-grid">
+      {% for collection in section.settings.collections %}
+        <a href="{{ collection.url }}" class="collection-card">
+          {% if collection.image %}
+            {{ collection.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: collection.title }}
+          {% endif %}
+          <h3>{{ collection.title }}</h3>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+ "name":"Collection List",
+ "settings":[
+  {"type":"text","id":"title","label":"Title","default":"Collections"},
+  {"type":"collection_list","id":"collections","label":"Collections"}
+ ]
+}
+{% endschema %}

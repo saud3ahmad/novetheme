@@ -1,0 +1,26 @@
+<section class="main-cart section">
+  <div class="container">
+    <h1>Cart</h1>
+
+    {% if cart.item_count > 0 %}
+      {% for item in cart.items %}
+        <div class="cart-item">
+          <a href="{{ item.url }}">{{ item.product.title }}</a>
+          <span>{{ item.final_line_price | money }}</span>
+        </div>
+      {% endfor %}
+
+      <h2>{{ cart.total_price | money }}</h2>
+      <a class="nc-btn nc-btn--primary" href="{{ routes.checkout_url }}">Checkout</a>
+    {% else %}
+      <p>Your cart is empty.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+ "name":"Main Cart",
+ "settings":[]
+}
+{% endschema %}

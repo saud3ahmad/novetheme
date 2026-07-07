@@ -1,0 +1,1 @@
+.product-grid,.collection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.product-card img,.collection-card img{border-radius:var(--nc-radius-md)}.price--sale{color:#d00}.newsletter input{padding:14px;border:1px solid var(--nc-border);border-radius:var(--nc-radius-sm)}@media(max-width:768px){.product-grid,.collection-grid{grid-template-columns:repeat(2,1fr)}}

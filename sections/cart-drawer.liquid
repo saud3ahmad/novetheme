@@ -1,0 +1,23 @@
+<div class="cart-drawer" id="CartDrawer">
+  <div class="cart-drawer__content">
+    <h2>Cart</h2>
+    {% if cart.item_count > 0 %}
+      {% for item in cart.items %}
+        <div class="cart-item">
+          <span>{{ item.product.title }}</span>
+          <span>{{ item.final_line_price | money }}</span>
+        </div>
+      {% endfor %}
+      <a href="{{ routes.checkout_url }}" class="nc-btn nc-btn--primary">Checkout</a>
+    {% else %}
+      <p>Your cart is empty.</p>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+ "name":"Cart Drawer",
+ "settings":[]
+}
+{% endschema %}

@@ -7,6 +7,17 @@ class NovaTheme {
  }
  init(){
   console.log('NovaTheme initialized');
+  this.mobileMenu();
+ }
+ mobileMenu(){
+  const menu=document.querySelector('.mobile-menu-drawer');
+  const toggle=document.querySelector('.mobile-menu-toggle');
+
+  if(toggle && menu){
+   toggle.addEventListener('click',()=>{
+    menu.classList.toggle('active');
+   });
+  }
  }
 }
 

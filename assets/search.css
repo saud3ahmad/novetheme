@@ -1,0 +1,1 @@
+.main-search form{display:flex;gap:12px;margin:30px 0}.main-search input{flex:1;padding:14px;border:1px solid var(--nc-border);border-radius:8px}.main-search .product-grid{margin-top:40px}@media(max-width:768px){.main-search form{flex-direction:column}}

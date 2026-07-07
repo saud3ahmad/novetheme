@@ -1,0 +1,13 @@
+:root {
+  --nc-primary: #111111;
+  --nc-secondary: #ffffff;
+  --nc-accent: #007aff;
+  --nc-text: #222222;
+  --nc-border: #e5e5e5;
+  --nc-gray: #f7f7f7;
+  --nc-container: 1440px;
+  --nc-radius-sm: 8px;
+  --nc-radius-md: 12px;
+  --nc-radius-lg: 20px;
+  --nc-transition: .3s ease;
+}

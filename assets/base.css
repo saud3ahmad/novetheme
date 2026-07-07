@@ -1,0 +1,30 @@
+*,*::before,*::after{
+ box-sizing:border-box;
+}
+
+html{
+ scroll-behavior:smooth;
+}
+
+body{
+ margin:0;
+ font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+ color:var(--nc-text);
+ background:var(--nc-secondary);
+}
+
+img{
+ max-width:100%;
+ height:auto;
+ display:block;
+}
+
+a{
+ color:inherit;
+ text-decoration:none;
+}
+
+.container{
+ width:min(100% - 48px,var(--nc-container));
+ margin-inline:auto;
+}

@@ -1,0 +1,26 @@
+<section class="main-product section">
+  <div class="container product-layout">
+    <div class="product-media">
+      {% if product.featured_image %}
+        {{ product.featured_image | image_url: width: 900 | image_tag: loading: 'eager', alt: product.title }}
+      {% endif %}
+    </div>
+
+    <div class="product-info">
+      <h1>{{ product.title }}</h1>
+      {% render 'price', product: product %}
+
+      {% form 'product', product %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <button class="nc-btn nc-btn--primary" type="submit">Add to cart</button>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+ "name":"Main Product",
+ "settings":[]
+}
+{% endschema %}

@@ -1,0 +1,1 @@
+.image-text__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}@media(max-width:768px){.image-text__grid{grid-template-columns:1fr}.nc-header nav{display:none}.product-layout{grid-template-columns:1fr}}
